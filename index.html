@@ -95,6 +95,119 @@
 		<div class="markdown-body home-categories">
 		
 			<div class="article">
+                <a class="clearlink" href="14823922966488.html">
+                
+                  <h1>Bootstrap 环境安装</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<h2 id="toc_0">Bootstrap 环境安装</h2>
+
+<hr/>
+
+<h3 id="toc_1">下载 Bootstrap</h3>
+
+<p>您可以从 <a href="http://getbootstrap.com/">http://getbootstrap.com/</a> 上下载 Bootstrap 的最新版本。当您点击这个链接时，您将看到如下所示的网页：</p>
+
+<p><img src="http://www.runoob.com/wp-content/uploads/2014/06/bootstrapdowloadscreen.jpg" alt="bootstrap"/><br/>
+您会看到两个按钮：<br/>
+Download Bootstrap：下载 Bootstrap。点击该按钮，您可以下载 Bootstrap CSS、JavaScript 和字体的预编译的压缩版本。不包含文档和最初的源代码文件。</p>
+
+<p>Download Source：下载源代码。点击该按钮，您可以直接从 from 上得到最新的 Bootstrap <mark>LESS</mark> 和 <mark>JavaScript</mark> 源代码。<br/>
+如果您使用的是未编译的源代码，您需要编译 LESS 文件来生成可重用的 CSS 文件。对于编译 LESS 文件，Bootstrap 官方只支持 <mark>Recess</mark>，这是 Twitter 的基于 less.js 的 CSS 提示。<br/>
+为了更好的了解和更方便的使用，我们将在本教程中使用 Bootstrap 的预编译版本。</p>
+
+<blockquote>
+<p>注：<mark>Recess</mark>Recess 是一个小型的 PHP 框架。<strong>运行环境要求：</strong>Minimum: Apache, PHP &gt;5.2.3 Recommended: Apache 2.2 or Lighttpd, mod_rewrite, PHP 5.2.9, AdvancedPHP Cache。</p>
+</blockquote>
+
+<p>由于文件是被编译过和压缩过的，在独立的功能开发中，您不必每次都包含这些独立的文件。</p>
+
+<h3 id="toc_2">文件结构</h3>
+
+<p><strong>预编译的 Bootstrap</strong>  </p>
+
+<p>当您下载了 Bootstrap 的已编译的版本，解压缩 ZIP 文件，您将看到下面的文件/目录结构：<br/>
+<img src="http://www.runoob.com/wp-content/uploads/2014/06/compiledfilestructure.jpg" alt="预编译"/></p>
+
+<p>如上图所示，可以看到已编译的 CSS 和 JS（bootstrap.<em>），以及已编译压缩的 CSS 和 JS（bootstrap.min.</em>）。同时也包含了 Glyphicons 的字体，这是一个可选的 Bootstrap 主题。<br/>
+<strong>已编译的 Bootstrap 文件结构</strong></p>
+
+<p><strong>Bootstrap 源代码</strong></p>
+
+<p>如果您下载了 Bootstrap 源代码，那么文件结构将如下所示：<br/>
+<img src="http://www.runoob.com/wp-content/uploads/2014/06/sourcecodefilestructure.jpg" alt="已编译文件结构"/><br/>
+* less/、js/ 和 fonts/ 下的文件分别是 Bootstrap CSS、JS 和图标字体的源代码。<br/>
+* dist/ 文件夹包含了上面预编译下载部分中所列的文件和文件夹。<br/>
+* docs-assets/、examples/ 和所有的 *.html 文件是 Bootstrap 文档。</p>
+
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+   &lt;head&gt;
+      &lt;title&gt;Bootstrap 模板&lt;/title&gt;
+      &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+      &lt;!-- 引入 Bootstrap --&gt;
+      &lt;link href=&quot;http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+ 
+      &lt;!-- HTML5 Shim 和 Respond.js 用于让 IE8 支持 HTML5元素和媒体查询 --&gt;
+      &lt;!-- 注意： 如果通过 file://  引入 Respond.js 文件，则该文件无法起效果 --&gt;
+      &lt;!--[if lt IE 9]&gt;
+         &lt;script src=&quot;https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js&quot;&gt;&lt;/script&gt;
+         &lt;script src=&quot;https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js&quot;&gt;&lt;/script&gt;
+      &lt;![endif]--&gt;
+   &lt;/head&gt;
+   &lt;body&gt;
+      &lt;h1&gt;Hello, world!&lt;/h1&gt;
+ 
+      &lt;!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) --&gt;
+      &lt;script src=&quot;https://code.jquery.com/jquery.js&quot;&gt;&lt;/script&gt;
+      &lt;!-- 包括所有已编译的插件 --&gt;
+      &lt;script src=&quot;js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+   &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<blockquote>
+<p>**rel=&quot;stylesheet&quot; ** rel是relationship的英文缩写; stylesheet:样式表。</p>
+</blockquote>
+
+<p>在这里，您可以看到包含了 jquery.js、bootstrap.min.js 和 bootstrap.min.css 文件，用于让一个常规的 HTML 文件变为使用了 Bootstrap 的模板。</p>
+
+<h3 id="toc_3">CDN 推荐</h3>
+
+<ul>
+<li>国内推荐使用 :1. <a href="https://www.staticfile.org/">https://www.staticfile.org/</a><br/></li>
+<li><a href="http://www.bootcdn.cn">http://www.bootcdn.cn</a></li>
+<li>国际推荐使用：<a href="https://cdnjs.com/">https://cdnjs.com/</a></li>
+</ul>
+
+<blockquote>
+<p><strong>CDN</strong>的全称是Content Delivery Network，即内容分发网络。其基本思路是尽可能避开互联网上有可能影响数据传输速度和稳定性的瓶颈和环节，使内容传输的更快、更稳定。通过在网络各处放置节点服务器所构成的在现有的互联网基础之上的一层智能虚拟网络，CDN系统能够实时地根据网络流量和各节点的连接、负载状况以及到用户的距离和响应时间等综合信息将用户的请求重新导向离用户最近的服务节点上。其目的是使用户可就近取得所需内容，解决 Internet网络拥挤的状况，提高用户访问网站的响应速度。</p>
+</blockquote>
+
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2016/12/22</span>
+                    
+          				   
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
                 <a class="clearlink" href="14823718409867.html">
                 
                   <h1>Spock：Spotify、Apple Music 歌词通用显示器</h1>
@@ -487,6 +600,12 @@ Office for Mac 2016:<br/>
                 <div class="side-content">
                 <ul class="posts-list">
 	      
+		      
+			      <li class="post">
+			        <a href="14823922966488.html">Bootstrap 环境安装</a>
+			      </li>
+		     
+		  
 		      
 			      <li class="post">
 			        <a href="14823718409867.html">Spock：Spotify、Apple Music 歌词通用显示器</a>
